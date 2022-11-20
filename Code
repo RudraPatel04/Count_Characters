@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   char findChar;
+   string userInput;
+   
+   cin >> findChar;
+   getline(cin, userInput);
+   int i = 0;
+   int charCount = 0;
+   
+   while( userInput.length()  > i ){
+      
+      if (userInput.at(i) == findChar){
+          charCount++;
+      }
+      i++;
+   }
+    if ( charCount == 0){
+        cout << charCount << " " << findChar << "'s" << endl;
+    }
+    if ( charCount == 1){
+        cout << charCount << " " << findChar << endl;
+    }
+    if (charCount > 1){
+        cout << charCount << " " << findChar << "'s" << endl;
+    }
+    
+   return 0;
+}
